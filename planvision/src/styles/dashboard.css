@@ -1,0 +1,354 @@
+/* ==========================================================
+   DASHBOARD LAYOUT
+========================================================== */
+
+.app{
+
+    display:flex;
+
+    min-height:100vh;
+
+    background:var(--background);
+
+}
+
+/* ==========================================================
+   MAIN CONTENT
+========================================================== */
+
+.main-content{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    min-height:100vh;
+
+    margin-left:310px;
+
+    transition:margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.main-content.collapsed{
+
+    margin-left:120px;
+
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.content{
+
+    flex:1;
+
+    padding:35px;
+
+}
+
+/* ==========================================================
+   PAGE TITLE
+========================================================== */
+
+.page-title{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+.page-title h2{
+
+    color:var(--secondary);
+
+    font-size:2rem;
+
+}
+
+.page-title p{
+
+    color:var(--text-light);
+
+}
+
+/* ==========================================================
+   KPI SECTION
+========================================================== */
+
+.kpi-section{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+/* ==========================================================
+   QUICK ACTIONS
+========================================================== */
+
+.quick-actions-section{
+
+    margin:40px 0;
+
+}
+
+/* ==========================================================
+   MODULES
+========================================================== */
+
+.modules-section{
+
+    margin-top:40px;
+
+}
+
+.modules-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+}
+
+/* ==========================================================
+   TABLE
+========================================================== */
+
+.table-section{
+
+    margin-top:45px;
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.footer{
+
+    margin-top:auto;
+
+    padding:25px 35px;
+
+    border-top:1px solid var(--glass-border);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:var(--glass-bg);
+
+    backdrop-filter:var(--glass-blur);
+
+    -webkit-backdrop-filter:var(--glass-blur);
+
+}
+
+.footer p{
+
+    font-size:.9rem;
+
+    color:var(--text-light);
+
+}
+
+.footer span{
+
+    font-size:.85rem;
+
+    color:var(--text-light);
+
+    font-weight:500;
+
+}
+
+/* ==========================================================
+   CHARTS SECTION
+ ========================================================== */
+
+/* ==========================================================
+   CHARTS SECTION
+ ========================================================== */
+
+.charts-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+    gap: 28px;
+    margin: 35px 0;
+}
+
+.chart-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.chart-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: rgba(139, 92, 246, 0.3);
+}
+
+.chart-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.chart-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.chart-header h3 {
+    font-size: 1.15rem;
+    color: var(--text);
+    font-weight: 800;
+    margin: 0 0 3px 0;
+}
+
+.chart-subtitle {
+    font-size: 0.82rem;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.chart-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    flex-shrink: 0;
+}
+
+.chart-icon-box.purple {
+    background: rgba(139, 92, 246, 0.15);
+    color: #A855F7;
+}
+
+.chart-icon-box.emerald {
+    background: rgba(16, 185, 129, 0.15);
+    color: #10B981;
+}
+
+.chart-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.chart-badge.purple {
+    background: rgba(139, 92, 246, 0.12);
+    color: #A855F7;
+    border: 1px solid rgba(139, 92, 246, 0.25);
+}
+
+.chart-badge.emerald {
+    background: rgba(16, 185, 129, 0.12);
+    color: #10B981;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:1200px){
+
+    .modules-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:992px){
+
+    .main-content{
+
+        margin-left:0;
+
+    }
+
+    .content{
+
+        padding:25px;
+
+    }
+
+    .charts-section{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .page-title{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
+
+    }
+
+    .kpi-section{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .modules-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .content{
+
+        padding:18px;
+
+    }
+
+}

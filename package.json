@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "dev": "npm run dev --prefix planvision",
+    "build": "npm run build --prefix planvision",
+    "lint": "npm run lint --prefix planvision",
+    "preview": "npm run preview --prefix planvision"
+  },
+  "dependencies": {
+    "date-fns": "^4.4.0",
+    "framer-motion": "^12.42.0",
+    "lucide-react": "^1.21.0",
+    "react-icons": "^5.6.0",
+    "react-router-dom": "^7.18.0",
+    "recharts": "^3.9.0"
+  }
+}

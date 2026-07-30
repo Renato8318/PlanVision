@@ -1,0 +1,185 @@
+/* ==========================================================
+   ACTIVITY TABLE
+========================================================== */
+
+.activity-table{
+
+    background:var(--glass-bg);
+
+    backdrop-filter:var(--glass-blur);
+
+    -webkit-backdrop-filter:var(--glass-blur);
+
+    border:1px solid var(--glass-border);
+
+    border-radius:24px;
+
+    padding:30px;
+
+    margin-top:40px;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.activity-table h2{
+
+    font-size:1.5rem;
+
+    color:var(--text);
+
+    margin-bottom:25px;
+
+}
+
+/* ==========================================================
+   TABLE
+   ========================================================= */
+
+.activity-table table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.activity-table thead{
+
+    background:var(--background);
+
+}
+
+.activity-table th{
+
+    text-align:left;
+
+    padding:18px;
+
+    color:var(--text-light);
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.activity-table td{
+
+    padding:18px;
+
+    font-size:.95rem;
+
+    color:var(--text);
+
+    border-bottom:1px solid var(--border);
+
+}
+
+/* ==========================================================
+   HOVER
+   ========================================================= */
+
+.activity-table tbody tr{
+
+    transition:var(--transition);
+
+}
+
+.activity-table tbody tr:hover{
+
+    background:var(--surface-hover);
+
+}
+
+/* ==========================================================
+   STATUS
+   ========================================================= */
+
+.status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+   STATUS COLORS
+   ========================================================= */
+
+.status.aprovado{
+
+    background:rgba(16,185,129,.12);
+
+    color:var(--success);
+
+}
+
+.status.analise{
+
+    background:rgba(245,158,11,.12);
+
+    color:var(--warning);
+
+}
+
+.status.pendente{
+
+    background:rgba(239,68,68,.12);
+
+    color:var(--danger);
+
+}
+
+.status.concluido{
+
+    background:rgba(139,92,246,.12);
+
+    color:var(--primary);
+
+}
+
+/* ==========================================================
+   STRIPED ROWS
+   ========================================================= */
+
+.activity-table tbody tr:nth-child(even){
+
+    background:rgba(255,255,255, 0.01);
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:768px){
+
+    .activity-table{
+
+        overflow-x:auto;
+
+        padding:20px;
+
+    }
+
+    .activity-table table{
+
+        min-width:700px;
+
+    }
+
+}

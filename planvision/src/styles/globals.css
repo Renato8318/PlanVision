@@ -1,0 +1,466 @@
+/* ==========================================================
+   PLANVISION - GLOBAL STYLES
+   ========================================================== */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "./menu.css";
+@import "./header.css";
+@import "./cards.css";
+@import "./table.css";
+@import "./dashboard.css";
+@import "./subpages.css";
+@import "./login.css";
+
+/* ==========================================================
+   CSS RESET
+   ========================================================== */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ==========================================================
+   ROOT VARIABLES
+   ========================================================== */
+
+:root{
+
+    /* Primary */
+
+    --primary:#8B5CF6;
+    --primary-dark:#7C3AED;
+    --primary-light:rgba(139, 92, 246, 0.15);
+
+    /* Secondary */
+
+    --secondary:#090A0F;
+
+    /* Background */
+
+    --background:#06070B;
+    --surface:rgba(14, 15, 25, 0.75);
+    --surface-solid:#0E0F19;
+    --surface-hover:rgba(22, 24, 41, 0.85);
+
+    /* Glassmorphism */
+    --glass-bg:rgba(14, 15, 25, 0.72);
+    --glass-border:rgba(139, 92, 246, 0.22);
+    --glass-blur:blur(16px);
+
+    /* Text */
+
+    --text:#F8FAFC;
+    --text-light:#94A3B8;
+    --text-white:#FFFFFF;
+
+    /* Status */
+
+    --success:#10B981;
+    --warning:#F59E0B;
+    --danger:#EF4444;
+    --info:#3B82F6;
+
+    /* Border */
+
+    --border:rgba(139, 92, 246, 0.2);
+
+    /* Shadows */
+
+    --shadow-sm:0 4px 14px rgba(0,0,0,.4);
+
+    --shadow-md:0 8px 24px rgba(0,0,0,.6);
+
+    --shadow-lg:0 16px 36px rgba(0,0,0,.8);
+
+    /* Radius */
+
+    --radius-sm:10px;
+    --radius-md:16px;
+    --radius-lg:24px;
+
+    /* Transition */
+
+    --transition:.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.app.light{
+
+    /* Primary */
+
+    --primary:#6D28D9;
+    --primary-dark:#5B21B6;
+    --primary-light:#EDE9FE;
+
+    /* Secondary */
+
+    --secondary:#0F172A;
+
+    /* Background */
+
+    --background:#F8F9FD;
+    --surface:rgba(255, 255, 255, 0.8);
+    --surface-solid:#FFFFFF;
+    --surface-hover:rgba(243, 244, 246, 0.9);
+
+    /* Glassmorphism */
+    --glass-bg:rgba(255, 255, 255, 0.75);
+    --glass-border:rgba(139, 92, 246, 0.18);
+    --glass-blur:blur(16px);
+
+    /* Text */
+
+    --text:#1F2937;
+    --text-light:#6B7280;
+    --text-white:#FFFFFF;
+
+    /* Border */
+
+    --border:rgba(229, 231, 235, 0.8);
+
+    /* Shadows */
+
+    --shadow-sm:0 4px 14px rgba(124,58,237,.06);
+
+    --shadow-md:0 8px 24px rgba(124,58,237,.1);
+
+    --shadow-lg:0 16px 36px rgba(124,58,237,.15);
+
+}
+
+/* ==========================================================
+   HTML
+   ========================================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/* ==========================================================
+   BODY
+   ========================================================== */
+
+body{
+
+    font-family:'Plus Jakarta Sans',sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+/* ==========================================================
+   ROOT
+   ========================================================== */
+
+#root{
+
+    width:100%;
+
+    min-height:100vh;
+
+}
+
+/* ==========================================================
+   TYPOGRAPHY
+   ========================================================== */
+
+h1{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+}
+
+h2{
+
+    font-size:1.7rem;
+
+    font-weight:600;
+
+}
+
+h3{
+
+    font-size:1.2rem;
+
+    font-weight:600;
+
+}
+
+p{
+
+    color:var(--text-light);
+
+    line-height:1.7;
+
+}
+
+/* ==========================================================
+   LINKS
+   ========================================================== */
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+/* ==========================================================
+   LIST
+   ========================================================== */
+
+ul{
+
+    list-style:none;
+
+}
+
+/* ==========================================================
+   BUTTON
+   ========================================================== */
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+    outline:none;
+
+    font-family:inherit;
+
+    transition:var(--transition);
+
+}
+
+/* ==========================================================
+   INPUT
+   ========================================================== */
+
+input{
+
+    outline:none;
+
+    border:none;
+
+    font-family:inherit;
+
+}
+
+/* ==========================================================
+   IMAGE
+   ========================================================== */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+/* ==========================================================
+   CONTAINER
+   ========================================================== */
+
+.container{
+
+    width:min(1400px,95%);
+
+    margin:auto;
+
+}
+
+/* ==========================================================
+   CARDS
+   ========================================================== */
+
+.card{
+
+    background:var(--surface);
+
+    border-radius:var(--radius-md);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+/* ==========================================================
+   SCROLLBAR
+   ========================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#EEF2F7;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:999px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/* ==========================================================
+   SELECTION
+   ========================================================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/* ==========================================================
+   UTILITIES
+   ========================================================== */
+
+.flex{
+
+    display:flex;
+
+}
+
+.grid{
+
+    display:grid;
+
+}
+
+.center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.space-between{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-1{
+
+    margin-top:10px;
+
+}
+
+.mt-2{
+
+    margin-top:20px;
+
+}
+
+.mt-3{
+
+    margin-top:30px;
+
+}
+
+.mt-4{
+
+    margin-top:40px;
+
+}
+
+.mb-1{
+
+    margin-bottom:10px;
+
+}
+
+.mb-2{
+
+    margin-bottom:20px;
+
+}
+
+.mb-3{
+
+    margin-bottom:30px;
+
+}
+
+.mb-4{
+
+    margin-bottom:40px;
+
+}
+
+/* ==========================================================
+   ANIMATIONS
+   ========================================================== */
+
+.fade-in{
+
+    animation:fade .5s ease;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
