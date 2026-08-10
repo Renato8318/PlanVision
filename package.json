@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "postinstall": "npm install --prefix planvision",
     "dev": "npm run dev --prefix planvision",
     "build": "npm run build --prefix planvision",
     "lint": "npm run lint --prefix planvision",
